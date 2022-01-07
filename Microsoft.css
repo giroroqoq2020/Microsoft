@@ -162,7 +162,7 @@ body {
     padding: 20px 0;
     position: relative;
 }
-/* .all-sitemap::after {
+#Mircrosoft + label::after {
     content: "";
     position: absolute;
     width: 110%;
@@ -172,21 +172,17 @@ body {
     border: 1px dashed black;
     background-color: #f2f2f2;
     z-index: -1;
-    display: none;
+    opacity: 0;
 }
-.all-sitemap:checked::after {
-    opacity: 1;
-} */
-
 #Mircrosoft{
     display: none;
 }
-#Mircrosoft:checked + .multi-column{
+#Mircrosoft:checked ~ .multi-column{
     display:block;
     display: flex;
 }
-#Mircrosoft:checked::after{
-    background-color: royalblue;
+#Mircrosoft:checked+ label::after{
+    opacity: 1;
 }
 .search {
     margin: 0 20px 0px 15px;
